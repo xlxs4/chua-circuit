@@ -41,3 +41,17 @@ end
 )
 @named Gnd = Ground()
 ##
+
+## Define the connections between the components.
+connections = [
+    connect(L.p, G.p)
+    connect(G.n, Nr.p)
+    connect(Nr.n, Gnd.g)
+    connect(C1.p, G.n)
+    connect(L.n, R.p)
+    connect(G.p, C2.p)
+    connect(C1.n, Gnd.g)
+    connect(C2.n, Gnd.g)
+    connect(R.n, Gnd.g)
+]
+##
