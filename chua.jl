@@ -66,7 +66,7 @@ sol = solve(prob, Rodas4())
 
 ## Visualize.
 gr()
-plot(sol, tspan=(0.0, 3e4), title="Chua's Circuit")
+plot(sol, title="Chua's Circuit")
 savefig("chua.png")
 ##
 
