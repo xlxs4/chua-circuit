@@ -63,3 +63,21 @@ sys = structural_simplify(model)
 prob = ODEProblem(sys, Pair[], (0, 5e4), saveat=100)
 sol = solve(prob, Rodas4())
 ##
+
+## Visualize.
+gr()
+plot(sol, tspan=(0.0, 3e4), title="Chua's Circuit")
+savefig("chua.png")
+##
+
+## And as a refresher:
+p1 = density([12.5e-3, 12.5e-3], [0.0, 300],
+            lw=3, color=:green, label="True value: R", linestyle=:dash)
+p2 = density([10, 10], [0.0, 1],
+            lw=3, color=:red, label="True value: C1", linestyle=:dash)
+p3 = density([100, 100], [0.0, 0.15],
+            lw=3, color=:purple, label="True value: C2", linestyle=:dash)
+
+l = @layout [a b c]
+plot(p1, p2, p3, layout = l)
+##
