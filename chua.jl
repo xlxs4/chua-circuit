@@ -55,3 +55,11 @@ connections = [
     connect(R.n, Gnd.g)
 ]
 ##
+
+## Solve model.
+@named model = ODESystem(connections, t,
+                        systems=[L, R, G, C1, C2, Nr, Gnd])
+sys = structural_simplify(model)
+prob = ODEProblem(sys, Pair[], (0, 5e4), saveat=100)
+sol = solve(prob, Rodas4())
+##
