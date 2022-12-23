@@ -3,7 +3,6 @@ using OrdinaryDiffEq
 using ModelingToolkit
 using ModelingToolkitStandardLibrary.Electrical
 using ModelingToolkitStandardLibrary.Electrical: OnePort
-using DataFrames
 using Statistics
 using StatsPlots
 ##
