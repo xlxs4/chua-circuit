@@ -31,7 +31,7 @@ end
 @named L = Inductor(L=18)
 @named R = Resistor(R=12.5e-3)
 @named G = Conductor(G=0.565)
-@named C1 = Capacitor(C=10, v_start=4)
+@named C1 = Capacitor(C=10, v=4)
 @named C2 = Capacitor(C=100)
 @named Nr = NonLinearResistor(
     Ga = -0.757576,
